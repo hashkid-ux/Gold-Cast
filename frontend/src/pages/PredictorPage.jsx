@@ -5,6 +5,7 @@ import {
 } from 'recharts';
 import PredictionForm from '../components/PredictionForm';
 import { TrendingUp, ArrowUpRight, ArrowDownRight, Activity } from 'lucide-react';
+import API_BASE from '../config';
 
 const CHART_TYPES = [
   { key: 'overlay', label: 'Overlay' },
