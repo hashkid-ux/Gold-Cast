@@ -68,16 +68,16 @@ export default function PredictorPage() {
   const [priceKey, setPriceKey] = useState(0); // for re-triggering animation
 
   useEffect(() => {
-    fetch('/api/model-insights')
+    fetch(`${API_BASE}/api/model-insights`)
       .then(r => r.json()).then(d => setMetrics(d.metrics)).catch(() => {});
-    fetch('/api/chart-data')
+    fetch(`${API_BASE}/api/chart-data`)
       .then(r => r.json()).then(d => setRealChart(d.chart || [])).catch(() => {});
   }, []);
 
   const handlePredict = async (formData) => {
     setLoading(true); setError(null); setInputs(formData);
     try {
-      const res = await fetch('/predict', {
+      const res = await fetch(`${API_BASE}/predict`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });

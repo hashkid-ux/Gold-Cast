@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Download } from 'lucide-react';
+import { ChevronLeft, ChevronRight, FileSpreadsheet, Download } from 'lucide-react';
+import API_BASE from '../config';
 
 const COLUMNS = [
   { key: 'inflation_rate', label: 'Inflation Rate (%)', gold: false },
@@ -22,7 +23,7 @@ export default function DatasetPage() {
 
   const fetchPage = (p) => {
     setLoading(true);
-    fetch(`/api/dataset?page=${p}&limit=${limit}`)
+    fetch(`${API_BASE}/api/dataset?page=${p}&limit=${limit}`)
       .then(r => r.json())
       .then(d => {
         setDataset(d.dataset || []);
@@ -72,7 +73,7 @@ export default function DatasetPage() {
 
       {/* Download Button */}
       <div style={{ marginBottom: '24px' }}>
-        <a href="/api/download/dataset" download
+        <a href={`${API_BASE}/api/download/dataset`} download
           style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', background: 'var(--primary)', color: 'var(--primary-foreground)', borderRadius: 'var(--radius)', textDecoration: 'none', fontWeight: '600', fontSize: '0.85rem' }}>
           <Download size={16} /> Download Full Dataset (CSV)
         </a>

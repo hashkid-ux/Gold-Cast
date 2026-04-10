@@ -1,4 +1,5 @@
 import React from 'react';
+import API_BASE from '../config';
 
 export default function TeamFooter() {
   return (
@@ -28,9 +29,9 @@ export default function TeamFooter() {
       <div style={{ marginTop: '32px' }}>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
           {[
-            { label: 'Dataset (CSV)', url: '/api/download/dataset' },
-            { label: 'Model (PKL)', url: '/api/download/model' },
-            { label: 'Insights (JSON)', url: '/api/download/insights' },
+            { label: 'Dataset (CSV)', url: `${API_BASE}/api/download/dataset` },
+            { label: 'Model (PKL)', url: `${API_BASE}/api/download/model` },
+            { label: 'Insights (JSON)', url: `${API_BASE}/api/download/insights` },
           ].map((d, i) => (
             <a key={i} href={d.url} download
               style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--primary)', textDecoration: 'none', padding: '6px 16px', border: '1px solid var(--primary)', borderRadius: 'var(--radius)' }}>

@@ -3,6 +3,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   ScatterChart, Scatter, ZAxis, LineChart, Line
 } from 'recharts';
+import API_BASE from '../config';
 
 export default function AnalysisPage() {
   const [insights, setInsights] = useState(null);
@@ -10,7 +11,7 @@ export default function AnalysisPage() {
   const [scatterView, setScatterView] = useState('inflation');
 
   useEffect(() => {
-    fetch('/api/model-insights')
+    fetch(`${API_BASE}/api/model-insights`)
       .then(r => r.json())
       .then(d => setInsights(d))
       .catch(err => console.error(err));

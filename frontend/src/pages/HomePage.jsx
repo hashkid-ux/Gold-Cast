@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Database, Brain, TrendingUp, BarChart3, ChevronRight, Download } from 'lucide-react';
+import API_BASE from '../config';
 
 export default function HomePage() {
   const [metrics, setMetrics] = useState(null);
 
   useEffect(() => {
-    fetch('/api/model-insights')
+    fetch(`${API_BASE}/api/model-insights`)
       .then(r => r.json())
       .then(d => setMetrics(d.metrics))
       .catch(() => {});
@@ -139,9 +140,9 @@ export default function HomePage() {
           <p style={{ color: 'var(--muted-foreground)', marginBottom: '24px' }}>Every artifact is downloadable. Nothing is hidden.</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
             {[
-              { label: 'Dataset (CSV)', url: '/api/download/dataset' },
-              { label: 'Trained Model (PKL)', url: '/api/download/model' },
-              { label: 'Model Insights (JSON)', url: '/api/download/insights' },
+              { label: 'Dataset (CSV)', url: `${API_BASE}/api/download/dataset` },
+              { label: 'Trained Model (PKL)', url: `${API_BASE}/api/download/model` },
+              { label: 'Model Insights (JSON)', url: `${API_BASE}/api/download/insights` },
             ].map((d, i) => (
               <a key={i} href={d.url} download
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', border: '1px solid var(--primary)', borderRadius: 'var(--radius)', color: 'var(--primary)', textDecoration: 'none', fontWeight: '600', fontSize: '0.85rem' }}>
