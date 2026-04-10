@@ -1,0 +1,696 @@
+{
+  "metrics": {
+    "test": {
+      "mae": 24.99,
+      "rmse": 30.4,
+      "r2": 0.9549,
+      "samples": 300
+    },
+    "train": {
+      "mae": 9.89,
+      "r2": 0.9915,
+      "samples": 1200
+    }
+  },
+  "features": [
+    {
+      "name": "inflation_rate",
+      "importance": 58.02
+    },
+    {
+      "name": "stock_market_index",
+      "importance": 27.92
+    },
+    {
+      "name": "crude_oil_price",
+      "importance": 13.14
+    },
+    {
+      "name": "currency_exchange_rate",
+      "importance": 0.92
+    }
+  ],
+  "correlations": {
+    "inflation_rate": 0.7446,
+    "crude_oil_price": 0.3696,
+    "stock_market_index": -0.5195,
+    "currency_exchange_rate": 0.0644
+  },
+  "oob_progression": [
+    {
+      "estimators": 1,
+      "oob_r2": -130.3017,
+      "oob_error": 131.3017
+    },
+    {
+      "estimators": 5,
+      "oob_r2": -21.499,
+      "oob_error": 22.499
+    },
+    {
+      "estimators": 10,
+      "oob_r2": -1.5042,
+      "oob_error": 2.5042
+    },
+    {
+      "estimators": 20,
+      "oob_r2": 0.7936,
+      "oob_error": 0.2064
+    },
+    {
+      "estimators": 30,
+      "oob_r2": 0.946,
+      "oob_error": 0.054
+    },
+    {
+      "estimators": 50,
+      "oob_r2": 0.9479,
+      "oob_error": 0.0521
+    },
+    {
+      "estimators": 75,
+      "oob_r2": 0.9496,
+      "oob_error": 0.0504
+    },
+    {
+      "estimators": 100,
+      "oob_r2": 0.9502,
+      "oob_error": 0.0498
+    }
+  ],
+  "scatter_inflation": [
+    {
+      "inflation_rate": 1.6404,
+      "gold_price": 1642.44
+    },
+    {
+      "inflation_rate": 2.2578,
+      "gold_price": 1855.08
+    },
+    {
+      "inflation_rate": 1.6384,
+      "gold_price": 1721.48
+    },
+    {
+      "inflation_rate": 5.0141,
+      "gold_price": 1962.54
+    },
+    {
+      "inflation_rate": 4.9088,
+      "gold_price": 1855.69
+    },
+    {
+      "inflation_rate": 4.173,
+      "gold_price": 1874.23
+    },
+    {
+      "inflation_rate": 3.9244,
+      "gold_price": 1879.35
+    },
+    {
+      "inflation_rate": 3.1096,
+      "gold_price": 1684.16
+    },
+    {
+      "inflation_rate": 6.459,
+      "gold_price": 2156.74
+    },
+    {
+      "inflation_rate": 1.6802,
+      "gold_price": 1725.32
+    },
+    {
+      "inflation_rate": 1.6961,
+      "gold_price": 1785.67
+    },
+    {
+      "inflation_rate": 4.4219,
+      "gold_price": 1891.13
+    },
+    {
+      "inflation_rate": 4.301,
+      "gold_price": 1797.87
+    },
+    {
+      "inflation_rate": 7.7859,
+      "gold_price": 2014.96
+    },
+    {
+      "inflation_rate": 6.4057,
+      "gold_price": 1952.65
+    },
+    {
+      "inflation_rate": 5.2001,
+      "gold_price": 1852.36
+    },
+    {
+      "inflation_rate": 3.6128,
+      "gold_price": 1936.09
+    },
+    {
+      "inflation_rate": 3.5499,
+      "gold_price": 2016.15
+    },
+    {
+      "inflation_rate": 1.7079,
+      "gold_price": 1844.78
+    },
+    {
+      "inflation_rate": 6.4259,
+      "gold_price": 2011.81
+    },
+    {
+      "inflation_rate": 1.9106,
+      "gold_price": 1793.19
+    },
+    {
+      "inflation_rate": 3.6088,
+      "gold_price": 1966.28
+    },
+    {
+      "inflation_rate": 1.4715,
+      "gold_price": 1729.46
+    },
+    {
+      "inflation_rate": 5.3166,
+      "gold_price": 1920.82
+    },
+    {
+      "inflation_rate": 7.5371,
+      "gold_price": 2106.69
+    },
+    {
+      "inflation_rate": 5.3275,
+      "gold_price": 1946.81
+    },
+    {
+      "inflation_rate": 7.0823,
+      "gold_price": 2017.22
+    },
+    {
+      "inflation_rate": 4.9691,
+      "gold_price": 1893.39
+    },
+    {
+      "inflation_rate": 5.5617,
+      "gold_price": 2204.34
+    },
+    {
+      "inflation_rate": 5.9173,
+      "gold_price": 2026.38
+    },
+    {
+      "inflation_rate": 4.2718,
+      "gold_price": 2043.59
+    },
+    {
+      "inflation_rate": 1.2752,
+      "gold_price": 1654.85
+    },
+    {
+      "inflation_rate": 3.2852,
+      "gold_price": 1960.43
+    },
+    {
+      "inflation_rate": 6.5351,
+      "gold_price": 2112.18
+    },
+    {
+      "inflation_rate": 5.6033,
+      "gold_price": 1933.84
+    },
+    {
+      "inflation_rate": 1.6848,
+      "gold_price": 1690.69
+    },
+    {
+      "inflation_rate": 4.4609,
+      "gold_price": 2025.07
+    },
+    {
+      "inflation_rate": 3.4564,
+      "gold_price": 1822.68
+    },
+    {
+      "inflation_rate": 2.2173,
+      "gold_price": 1813.91
+    },
+    {
+      "inflation_rate": 6.3989,
+      "gold_price": 1862.32
+    },
+    {
+      "inflation_rate": 1.5145,
+      "gold_price": 1810.24
+    },
+    {
+      "inflation_rate": 1.5694,
+      "gold_price": 1576.1
+    },
+    {
+      "inflation_rate": 2.3968,
+      "gold_price": 1915.42
+    },
+    {
+      "inflation_rate": 3.8053,
+      "gold_price": 2016.64
+    },
+    {
+      "inflation_rate": 6.5044,
+      "gold_price": 1910.02
+    },
+    {
+      "inflation_rate": 1.494,
+      "gold_price": 1932.23
+    },
+    {
+      "inflation_rate": 3.7027,
+      "gold_price": 1906.34
+    },
+    {
+      "inflation_rate": 2.8958,
+      "gold_price": 1752.99
+    },
+    {
+      "inflation_rate": 3.7471,
+      "gold_price": 1915.43
+    },
+    {
+      "inflation_rate": 7.6517,
+      "gold_price": 2160.91
+    }
+  ],
+  "scatter_oil": [
+    {
+      "crude_oil_price": 75.2164,
+      "gold_price": 1642.44
+    },
+    {
+      "crude_oil_price": 69.7747,
+      "gold_price": 1855.08
+    },
+    {
+      "crude_oil_price": 93.3713,
+      "gold_price": 1721.48
+    },
+    {
+      "crude_oil_price": 75.7817,
+      "gold_price": 1962.54
+    },
+    {
+      "crude_oil_price": 65.4428,
+      "gold_price": 1855.69
+    },
+    {
+      "crude_oil_price": 79.5424,
+      "gold_price": 1874.23
+    },
+    {
+      "crude_oil_price": 55.1031,
+      "gold_price": 1879.35
+    },
+    {
+      "crude_oil_price": 52.4269,
+      "gold_price": 1684.16
+    },
+    {
+      "crude_oil_price": 106.4876,
+      "gold_price": 2156.74
+    },
+    {
+      "crude_oil_price": 88.3572,
+      "gold_price": 1725.32
+    },
+    {
+      "crude_oil_price": 99.391,
+      "gold_price": 1785.67
+    },
+    {
+      "crude_oil_price": 55.4919,
+      "gold_price": 1891.13
+    },
+    {
+      "crude_oil_price": 51.2605,
+      "gold_price": 1797.87
+    },
+    {
+      "crude_oil_price": 64.4953,
+      "gold_price": 2014.96
+    },
+    {
+      "crude_oil_price": 91.0626,
+      "gold_price": 1952.65
+    },
+    {
+      "crude_oil_price": 85.0422,
+      "gold_price": 1852.36
+    },
+    {
+      "crude_oil_price": 106.0002,
+      "gold_price": 1936.09
+    },
+    {
+      "crude_oil_price": 113.43,
+      "gold_price": 2016.15
+    },
+    {
+      "crude_oil_price": 92.2441,
+      "gold_price": 1844.78
+    },
+    {
+      "crude_oil_price": 92.1128,
+      "gold_price": 2011.81
+    },
+    {
+      "crude_oil_price": 104.1045,
+      "gold_price": 1793.19
+    },
+    {
+      "crude_oil_price": 84.567,
+      "gold_price": 1966.28
+    },
+    {
+      "crude_oil_price": 87.1656,
+      "gold_price": 1729.46
+    },
+    {
+      "crude_oil_price": 94.5168,
+      "gold_price": 1920.82
+    },
+    {
+      "crude_oil_price": 71.2052,
+      "gold_price": 2106.69
+    },
+    {
+      "crude_oil_price": 89.2462,
+      "gold_price": 1946.81
+    },
+    {
+      "crude_oil_price": 100.0029,
+      "gold_price": 2017.22
+    },
+    {
+      "crude_oil_price": 76.6362,
+      "gold_price": 1893.39
+    },
+    {
+      "crude_oil_price": 115.9907,
+      "gold_price": 2204.34
+    },
+    {
+      "crude_oil_price": 109.0555,
+      "gold_price": 2026.38
+    },
+    {
+      "crude_oil_price": 93.7349,
+      "gold_price": 2043.59
+    },
+    {
+      "crude_oil_price": 59.8498,
+      "gold_price": 1654.85
+    },
+    {
+      "crude_oil_price": 109.7649,
+      "gold_price": 1960.43
+    },
+    {
+      "crude_oil_price": 103.6281,
+      "gold_price": 2112.18
+    },
+    {
+      "crude_oil_price": 59.9575,
+      "gold_price": 1933.84
+    },
+    {
+      "crude_oil_price": 65.7231,
+      "gold_price": 1690.69
+    },
+    {
+      "crude_oil_price": 74.8845,
+      "gold_price": 2025.07
+    },
+    {
+      "crude_oil_price": 94.9628,
+      "gold_price": 1822.68
+    },
+    {
+      "crude_oil_price": 85.779,
+      "gold_price": 1813.91
+    },
+    {
+      "crude_oil_price": 51.6547,
+      "gold_price": 1862.32
+    },
+    {
+      "crude_oil_price": 98.5533,
+      "gold_price": 1810.24
+    },
+    {
+      "crude_oil_price": 55.3941,
+      "gold_price": 1576.1
+    },
+    {
+      "crude_oil_price": 119.5279,
+      "gold_price": 1915.42
+    },
+    {
+      "crude_oil_price": 90.404,
+      "gold_price": 2016.64
+    },
+    {
+      "crude_oil_price": 58.6044,
+      "gold_price": 1910.02
+    },
+    {
+      "crude_oil_price": 114.3249,
+      "gold_price": 1932.23
+    },
+    {
+      "crude_oil_price": 115.6172,
+      "gold_price": 1906.34
+    },
+    {
+      "crude_oil_price": 56.8877,
+      "gold_price": 1752.99
+    },
+    {
+      "crude_oil_price": 112.4612,
+      "gold_price": 1915.43
+    },
+    {
+      "crude_oil_price": 118.6518,
+      "gold_price": 2160.91
+    }
+  ],
+  "actual_vs_predicted": [
+    {
+      "index": 0,
+      "actual": 1642.44,
+      "predicted": 1645.8
+    },
+    {
+      "index": 1,
+      "actual": 1855.08,
+      "predicted": 1876.61
+    },
+    {
+      "index": 2,
+      "actual": 1721.48,
+      "predicted": 1762.93
+    },
+    {
+      "index": 3,
+      "actual": 1962.54,
+      "predicted": 1954.06
+    },
+    {
+      "index": 4,
+      "actual": 1855.69,
+      "predicted": 1875.82
+    },
+    {
+      "index": 5,
+      "actual": 1874.23,
+      "predicted": 1872.38
+    },
+    {
+      "index": 6,
+      "actual": 1879.35,
+      "predicted": 1899.93
+    },
+    {
+      "index": 7,
+      "actual": 1684.16,
+      "predicted": 1709.81
+    },
+    {
+      "index": 8,
+      "actual": 2156.74,
+      "predicted": 2158.17
+    },
+    {
+      "index": 9,
+      "actual": 1725.32,
+      "predicted": 1673.12
+    },
+    {
+      "index": 10,
+      "actual": 1785.67,
+      "predicted": 1813.74
+    },
+    {
+      "index": 11,
+      "actual": 1891.13,
+      "predicted": 1870.12
+    },
+    {
+      "index": 12,
+      "actual": 1797.87,
+      "predicted": 1786.94
+    },
+    {
+      "index": 13,
+      "actual": 2014.96,
+      "predicted": 1983.83
+    },
+    {
+      "index": 14,
+      "actual": 1952.65,
+      "predicted": 1986.31
+    },
+    {
+      "index": 15,
+      "actual": 1852.36,
+      "predicted": 1885.5
+    },
+    {
+      "index": 16,
+      "actual": 1936.09,
+      "predicted": 1885.96
+    },
+    {
+      "index": 17,
+      "actual": 2016.15,
+      "predicted": 1987.64
+    },
+    {
+      "index": 18,
+      "actual": 1844.78,
+      "predicted": 1824.13
+    },
+    {
+      "index": 19,
+      "actual": 2011.81,
+      "predicted": 2044.03
+    },
+    {
+      "index": 20,
+      "actual": 1793.19,
+      "predicted": 1821.96
+    },
+    {
+      "index": 21,
+      "actual": 1966.28,
+      "predicted": 1933.19
+    },
+    {
+      "index": 22,
+      "actual": 1729.46,
+      "predicted": 1720.49
+    },
+    {
+      "index": 23,
+      "actual": 1920.82,
+      "predicted": 1915.13
+    },
+    {
+      "index": 24,
+      "actual": 2106.69,
+      "predicted": 2121.74
+    },
+    {
+      "index": 25,
+      "actual": 1946.81,
+      "predicted": 1921.68
+    },
+    {
+      "index": 26,
+      "actual": 2017.22,
+      "predicted": 2017.67
+    },
+    {
+      "index": 27,
+      "actual": 1893.39,
+      "predicted": 1836.46
+    },
+    {
+      "index": 28,
+      "actual": 2204.34,
+      "predicted": 2173.63
+    },
+    {
+      "index": 29,
+      "actual": 2026.38,
+      "predicted": 1997.08
+    }
+  ],
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "random_state": 42,
+    "test_size": 0.2,
+    "oob_score": true
+  },
+  "dataset_stats": {
+    "inflation_rate": {
+      "count": 1500.0,
+      "mean": 4.5,
+      "std": 2.06,
+      "min": 1.03,
+      "25%": 2.66,
+      "50%": 4.55,
+      "75%": 6.28,
+      "max": 8.0
+    },
+    "crude_oil_price": {
+      "count": 1500.0,
+      "mean": 85.03,
+      "std": 20.26,
+      "min": 50.0,
+      "25%": 68.02,
+      "50%": 85.35,
+      "75%": 102.81,
+      "max": 119.88
+    },
+    "stock_market_index": {
+      "count": 1500.0,
+      "mean": 4223.42,
+      "std": 712.95,
+      "min": 3000.08,
+      "25%": 3603.75,
+      "50%": 4218.87,
+      "75%": 4823.15,
+      "max": 5498.89
+    },
+    "currency_exchange_rate": {
+      "count": 1500.0,
+      "mean": 77.49,
+      "std": 4.34,
+      "min": 70.0,
+      "25%": 73.73,
+      "50%": 77.34,
+      "75%": 81.27,
+      "max": 84.99
+    },
+    "gold_price": {
+      "count": 1500.0,
+      "mean": 1930.46,
+      "std": 136.82,
+      "min": 1564.11,
+      "25%": 1834.2,
+      "50%": 1928.98,
+      "75%": 2025.3,
+      "max": 2317.51
+    }
+  }
+}

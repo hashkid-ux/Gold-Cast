@@ -1,0 +1,30 @@
+# Dependencies
+frontend/node_modules/
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+
+# IDE
+.vscode/
+.idea/
+
+# Build output
+frontend/dist/
+
+# Temp scripts (used during development)
+extract_pptx.py
+fix_pptx.py
+fix_pptx2.py
+align_abstract.py
+pptx_content.txt
+pptx_content_utf8.txt
