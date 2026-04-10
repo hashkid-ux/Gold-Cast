@@ -45,42 +45,39 @@
   --sidebar-primary-foreground: #ffffff;
 }
 
-body.dark, :root { /* Actually, let's force the dark theme for the cool aesthetic, or support both */ }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --card: #262626;
-    --ring: #f59e0b;
-    --input: #404040;
-    --muted: #262626;
-    --accent: #92400e;
-    --border: #404040;
-    --chart-1: #fbbf24;
-    --chart-2: #d97706;
-    --chart-3: #92400e;
-    --chart-4: #b45309;
-    --chart-5: #92400e;
-    --popover: #262626;
-    --primary: #f59e0b;
-    --sidebar: #0f0f0f;
-    --secondary: #262626;
-    --background: #171717;
-    --foreground: #e5e5e5;
-    --destructive: #ef4444;
-    --sidebar-ring: #f59e0b;
-    --sidebar-accent: #92400e;
-    --sidebar-border: #404040;
-    --card-foreground: #e5e5e5;
-    --sidebar-primary: #f59e0b;
-    --muted-foreground: #a3a3a3;
-    --accent-foreground: #fde68a;
-    --popover-foreground: #e5e5e5;
-    --primary-foreground: #000000;
-    --sidebar-foreground: #e5e5e5;
-    --secondary-foreground: #e5e5e5;
-    --destructive-foreground: #ffffff;
-    --sidebar-accent-foreground: #fde68a;
-    --sidebar-primary-foreground: #ffffff;
-  }
+.dark {
+  --card: #262626;
+  --ring: #f59e0b;
+  --input: #404040;
+  --muted: #262626;
+  --accent: #92400e;
+  --border: #404040;
+  --chart-1: #fbbf24;
+  --chart-2: #d97706;
+  --chart-3: #92400e;
+  --chart-4: #b45309;
+  --chart-5: #92400e;
+  --popover: #262626;
+  --primary: #f59e0b;
+  --sidebar: #0f0f0f;
+  --secondary: #262626;
+  --background: #171717;
+  --foreground: #e5e5e5;
+  --destructive: #ef4444;
+  --sidebar-ring: #f59e0b;
+  --sidebar-accent: #92400e;
+  --sidebar-border: #404040;
+  --card-foreground: #e5e5e5;
+  --sidebar-primary: #f59e0b;
+  --muted-foreground: #a3a3a3;
+  --accent-foreground: #fde68a;
+  --popover-foreground: #e5e5e5;
+  --primary-foreground: #000000;
+  --sidebar-foreground: #e5e5e5;
+  --secondary-foreground: #e5e5e5;
+  --destructive-foreground: #ffffff;
+  --sidebar-accent-foreground: #fde68a;
+  --sidebar-primary-foreground: #ffffff;
 }
 
 * {
@@ -95,6 +92,7 @@ body {
   color: var(--foreground);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typography */

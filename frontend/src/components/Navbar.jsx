@@ -1,6 +1,7 @@
 import React from 'react';
 import { Activity } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function Navbar() {
   const location = useLocation();
@@ -15,17 +16,20 @@ export default function Navbar() {
   });
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ paddingRight: '24px' }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', color: 'var(--foreground)' }}>
         <Activity size={28} color="var(--primary)" />
         <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>Gold Cast</span>
       </Link>
-      <div className="nav-links">
-        <Link to="/" style={getLinkStyle('/')}>Overview</Link>
-        <Link to="/dataset" style={getLinkStyle('/dataset')}>Dataset</Link>
-        <Link to="/analysis" style={getLinkStyle('/analysis')}>EDA & Logs</Link>
-        <Link to="/architecture" style={getLinkStyle('/architecture')}>Architecture</Link>
-        <Link to="/predictor" style={getLinkStyle('/predictor')}>Predictor Engine</Link>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+        <div className="nav-links">
+          <Link to="/" style={getLinkStyle('/')}>Overview</Link>
+          <Link to="/dataset" style={getLinkStyle('/dataset')}>Dataset</Link>
+          <Link to="/analysis" style={getLinkStyle('/analysis')}>EDA & Logs</Link>
+          <Link to="/architecture" style={getLinkStyle('/architecture')}>Architecture</Link>
+          <Link to="/predictor" style={getLinkStyle('/predictor')}>Predictor Engine</Link>
+        </div>
+        <ThemeToggle />
       </div>
     </nav>
   );
