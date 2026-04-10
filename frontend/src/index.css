@@ -408,50 +408,92 @@ section {
 
 /* ═══════ RESPONSIVE DESIGN ═══════ */
 
-/* Navbar */
+/* ── Skeleton loader animation ── */
+@keyframes skeletonPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.skeleton {
+  background: var(--muted);
+  border-radius: var(--radius);
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+/* ── Mobile nav toggle ── */
+.nav-mobile-controls { display: none !important; }
+.nav-desktop { display: flex !important; }
+
 @media (max-width: 768px) {
+  .nav-mobile-controls { display: flex !important; }
+  .nav-desktop { display: none !important; }
   .navbar {
     padding: 0 16px;
     height: 64px;
   }
-  .nav-links {
-    gap: 12px;
-    font-size: 0.8rem;
-  }
-  .nav-links a {
-    font-size: 0.8rem;
-  }
 }
 
-/* Hero */
-@media (max-width: 768px) {
-  .hero-title { font-size: 2.5rem; }
-  .hero-description { font-size: 1rem; }
-  .section-title { font-size: 1.8rem; }
-}
-
-/* Predictor Page Responsive */
+/* ── Tablets (769–1024px) ── */
 @media (max-width: 1024px) {
   .predictor-grid {
     grid-template-columns: 1fr !important;
   }
-  .predictor-form-col {
-    order: 1;
+  .predictor-form-col { order: 1; }
+  .predictor-chart-col { order: 0; }
+
+  /* Architecture: hyperparameter 3-col → stack */
+  .arch-param-grid {
+    grid-template-columns: 1fr !important;
   }
-  .predictor-chart-col {
-    order: 0;
+  /* Analysis: scatter + correlation side-by-side → stack */
+  .analysis-split-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
-@media (max-width: 640px) {
-  .predictor-grid {
-    gap: 12px !important;
-  }
-  .chart-type-selector {
-    flex-wrap: wrap;
-  }
-  .input-vector-grid {
+/* ── Large phones (481–768px) ── */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-description { font-size: 1rem; }
+  .section-title { font-size: 1.8rem; }
+
+  /* Variable definitions, math grid → stack */
+  .responsive-2col {
     grid-template-columns: 1fr !important;
+  }
+  /* Architecture: tech stack grid → stack */
+  .arch-tech-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Dataset pagination bar */
+  .dataset-toolbar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start !important;
+  }
+}
+
+/* ── Small phones (<480px) ── */
+@media (max-width: 480px) {
+  .predictor-grid { gap: 12px !important; }
+  .chart-type-selector { flex-wrap: wrap; }
+  .input-vector-grid { grid-template-columns: 1fr !important; }
+
+  /* Hero buttons stack vertically */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-buttons a, .hero-buttons button { width: 100%; }
+
+  /* Stats grid: force 2 columns instead of auto-fit */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  /* Page content padding */
+  .page-content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -464,23 +506,13 @@ section {
   border-color: color-mix(in srgb, var(--border) 70%, var(--primary) 30%);
 }
 
-/* Smooth scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--muted);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-foreground);
-}
+/* ── Smooth scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--muted); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
 
-/* Range input styling */
+/* ── Range input styling ── */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -489,7 +521,6 @@ input[type="range"] {
   border-radius: 2px;
   outline: none;
 }
-
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -502,18 +533,9 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px var(--primary);
   transition: transform 0.15s;
 }
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
 
-input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-}
-
-/* Number input spinner hide */
+/* ── Number input spinner hide ── */
 input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }

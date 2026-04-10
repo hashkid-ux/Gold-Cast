@@ -36,7 +36,7 @@ export default function HomePage() {
           <span style={{ fontSize: '0.8rem', color: 'var(--accent-foreground)', fontWeight: '600' }}>LIVE ML ENGINE — RANDOM FOREST REGRESSOR</span>
         </div>
 
-        <h1 style={{ fontSize: '5rem', fontWeight: '900', lineHeight: 1.05, marginBottom: '28px', maxWidth: '900px' }}>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: '900', lineHeight: 1.05, marginBottom: '28px', maxWidth: '900px' }}>
           <span className="gradient-text">Gold Price</span><br />
           Prediction System
         </h1>
@@ -44,7 +44,7 @@ export default function HomePage() {
           A production-grade Machine Learning system that ingests macroeconomic signals — inflation, crude oil, equity indices, and currency exchange — and forecasts gold prices using an ensemble of 100 decision trees.
         </p>
 
-        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="hero-buttons" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
           <Link to="/predictor" style={{ textDecoration: 'none' }}>
             <button className="btn-primary" style={{ padding: '16px 36px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
               Launch Predictor Engine <ArrowRight size={18} />
@@ -62,7 +62,7 @@ export default function HomePage() {
 
       {/* STATS — REAL FROM API */}
       <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', background: 'var(--muted)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '32px', textAlign: 'center' }}>
+        <div className="stats-grid" style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '32px', textAlign: 'center' }}>
           {[
             { label: 'R² Accuracy', value: t.r2 || '—', sub: 'Coefficient of Determination' },
             { label: 'Mean Absolute Error', value: t.mae ? `$${t.mae}` : '—', sub: 'Price Forecast Variance' },

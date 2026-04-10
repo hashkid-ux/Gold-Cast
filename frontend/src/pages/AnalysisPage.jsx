@@ -31,8 +31,13 @@ export default function AnalysisPage() {
 
   if (!insights) {
     return (
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '160px 24px', textAlign: 'center', color: 'var(--muted-foreground)', fontFamily: 'var(--font-mono)' }}>
-        Loading insights from backend...
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '160px 24px', textAlign: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '500px', margin: '0 auto' }}>
+          <div className="skeleton" style={{ height: '24px', width: '60%', margin: '0 auto' }} />
+          <div className="skeleton" style={{ height: '200px', width: '100%' }} />
+          <div className="skeleton" style={{ height: '16px', width: '80%', margin: '0 auto' }} />
+          <div className="skeleton" style={{ height: '16px', width: '50%', margin: '0 auto' }} />
+        </div>
       </div>
     );
   }
@@ -60,7 +65,7 @@ export default function AnalysisPage() {
     <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '120px 24px 80px' }}>
       <div style={{ marginBottom: '56px' }}>
         <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--primary)', fontWeight: '700', marginBottom: '12px', textTransform: 'uppercase' }}>Exploratory Data Analysis / Market Trends</div>
-        <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Understanding Market Trends & Logs</h1>
+        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: '800', marginBottom: '16px' }}>Understanding Market Trends & Logs</h1>
         <p style={{ color: 'var(--muted-foreground)', fontSize: '1.1rem', lineHeight: '1.7', maxWidth: '780px' }}>
           This page helps users understand market trends by identifying hidden patterns within the historical dataset. Every number is computed directly from the data to support better financial planning.
         </p>
@@ -89,7 +94,7 @@ export default function AnalysisPage() {
       </div>
 
       {/* SCATTER + CORRELATIONS — ALL REAL */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '40px' }}>
+      <div className="analysis-split-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '40px' }}>
         <div className="glass-panel" style={{ padding: '32px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
             <h3>Scatter Plot (Real Data — 50 samples)</h3>

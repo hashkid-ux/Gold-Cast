@@ -406,8 +406,8 @@ export default function PredictorPage() {
                   {renderChart()}
                 </ResponsiveContainer>
               ) : (
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--muted-foreground)', fontFamily: 'var(--font-mono)' }}>
-                  Loading real data...
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', height: '100%', justifyContent: 'center', padding: '24px' }}>
+                  <div className="skeleton" style={{ height: '100%', minHeight: '200px', width: '100%' }} />
                 </div>
               )}
             </div>

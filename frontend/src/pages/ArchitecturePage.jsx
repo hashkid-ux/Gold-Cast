@@ -38,7 +38,7 @@ export default function ArchitecturePage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '120px 24px 80px' }}>
       <div style={{ marginBottom: '56px' }}>
         <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--primary)', fontWeight: '700', marginBottom: '12px', textTransform: 'uppercase' }}>Technical Documentation</div>
-        <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>ML Architecture</h1>
+        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: '800', marginBottom: '16px' }}>ML Architecture</h1>
         <p style={{ color: 'var(--muted-foreground)', fontSize: '1.1rem', lineHeight: '1.7', maxWidth: '780px' }}>
           A rigorous, peer-review-grade architectural breakdown of every technical decision made in this system — from algorithm selection to hyperparameter justification.
         </p>
@@ -71,7 +71,7 @@ export default function ArchitecturePage() {
         <p style={{ color: 'var(--muted-foreground)', marginBottom: '28px' }}>Every parameter was chosen deliberately. No default values were accepted without empirical reasoning.</p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {PARAMS.map((p, i) => (
-            <div key={i} style={{ display: 'grid', gridTemplateColumns: '200px 100px 1fr', gap: '24px', padding: '16px 24px', background: 'var(--muted)', borderRadius: 'var(--radius)', alignItems: 'start' }}>
+            <div key={i} className="arch-param-grid" style={{ display: 'grid', gridTemplateColumns: '200px 100px 1fr', gap: '24px', padding: '16px 24px', background: 'var(--muted)', borderRadius: 'var(--radius)', alignItems: 'start' }}>
               <code style={{ fontFamily: 'var(--font-mono)', color: 'var(--primary)', fontWeight: '700' }}>{p.param}</code>
               <code style={{ fontFamily: 'var(--font-mono)', color: 'var(--foreground)' }}>{p.value}</code>
               <span style={{ color: 'var(--muted-foreground)', fontSize: '0.9rem', lineHeight: '1.6' }}>{p.why}</span>
@@ -103,7 +103,7 @@ export default function ArchitecturePage() {
       {/* MATH EXPLANATION */}
       <div className="glass-panel" style={{ padding: '40px' }}>
         <h2 style={{ marginBottom: '16px' }}>The Random Forest Algorithm — Mathematical Foundation</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+        <div className="responsive-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
           {[
             { title: 'Bootstrap Aggregation (Bagging)', body: 'Each of the 100 trees is trained on a random bootstrap sample of the training data (with replacement). This injects diversity across the ensemble and prevents all trees from learning the same high-bias patterns.' },
             { title: 'Recursive Binary Splitting', body: 'At each node, the forest evaluates all possible split thresholds across all 4 features. The split minimizing Mean Squared Error (MSE) is selected: argmin Σ(yᵢ - ȳ_left)² + Σ(yᵢ - ȳ_right)²' },
@@ -121,7 +121,7 @@ export default function ArchitecturePage() {
       {/* TECH STACK */}
       <div className="glass-panel" style={{ padding: '40px', marginTop: '32px' }}>
         <h2 style={{ marginBottom: '24px' }}>Technology Stack</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+        <div className="arch-tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
           {[
             { category: 'Machine Learning', items: [
               { name: 'Python', version: '3.11', role: 'Core language' },
